@@ -71,11 +71,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1790173773,
-        "narHash": "sha256-sWjaTlLfBE7ZY8urkeQ8YcfIrl++sbc6wqEYPM3lvcQ=",
+        "lastModified": 1790520897,
+        "narHash": "sha256-AV/8goV4cMtVPA9UlqhQjobgneSX3g97ViVxI+2jfjs=",
         "owner": "Team-MaRo",
         "repo": "spigot-build",
-        "rev": "0919dc78dbd06e2fe5fd5caa12e9342e392f993c",
+        "rev": "4ccc5e7377e4f11db77e88a1dbe9583c5a4c9b64",
         "type": "github"
       },
       "original": {
