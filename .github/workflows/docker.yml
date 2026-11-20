@@ -289,7 +289,7 @@ jobs:
           for arch in $ARCH_LIST; do
             archive="artifacts/image-${{ matrix.spigot }}-${arch}/image.tar"
             test -f "$archive" || { echo "missing $archive"; exit 1; }
-            skopeo copy --dest-tls-verify=false \
+            skopeo copy --format oci --dest-tls-verify=false \
               docker-archive:"$archive" \
               docker://localhost:5000/staging:${{ matrix.spigot }}-${arch}
             d=$(skopeo inspect --tls-verify=false \
@@ -312,6 +312,8 @@ jobs:
       - name: Resolve tags
         uses: docker/metadata-action@v6
         id: meta
+        env:
+          DOCKER_METADATA_ANNOTATIONS_LEVELS: index
         with:
           images: ${{ vars.IMAGE_NAME }}
           tags: |
